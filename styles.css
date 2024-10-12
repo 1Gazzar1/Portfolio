@@ -1,0 +1,54 @@
+body{
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(33, 39, 54));
+    
+} 
+.top-right {
+    display: flex;
+    font-size: small;
+    justify-content: right;
+}
+.top-right a{
+    color: rgb(123, 150, 173);     
+    margin: 15px;
+    text-decoration: none;   
+}
+.top-right a:hover{
+    color: aliceblue;    
+}
+
+.about{
+    color: rgb(163, 182, 184);
+    max-width: min(500px , 60%);
+    margin: 0px min(10%);
+    margin-top: 100px;
+}
+.about h1{
+    font-size: 40px;
+}
+.about p{
+    font-size: 22px;
+}
+.links-belt { 
+    width: 115px;
+    margin: 0px min(10%);
+    padding: 0px;
+    /* border: 0.1px solid rgba(255, 255, 255, 0.2);    */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.links-belt img{
+    transition: transform 0.1s;
+}
+.links-belt img:hover{
+    transform: scale(1.2);
+}
+.projects{
+    float: right;
+    width: min(500px,40%);
+    height: 100px;
+    margin: 0px ;
+    background-color: rgba(44, 47, 50, 0.383);
+    box-sizing: border-box;
+}
+
