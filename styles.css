@@ -13,9 +13,6 @@ main{
     flex-direction: column;
 }
 
-.person::-webkit-scrollbar {
-    display: none; /* Hides the scrollbar */
-}
 header{
     position: sticky;
     top: 0;
@@ -47,14 +44,13 @@ header{
 }
 
 .about{
-    margin-left: 10%;
-}
-.about{
     display: flex;
     flex-direction: column;
     color: rgb(163, 182, 184);
     max-width: min(500px , 60%);
-    margin-top: 100px;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-left: 15%;
 }
 .about h1{
     font-size: 40px;
@@ -63,9 +59,7 @@ header{
     font-size: 22px;
 }
 .links-belt {   
-    margin-top: 5px ;  
-    padding: 0px;
-    margin-left: calc(10% + min(500px , 60%)/2 - 175px);;
+    
     /* border: 0.1px solid rgba(255, 255, 255, 0.2);    */
     border-radius: 10px;
     display: flex;
@@ -78,6 +72,9 @@ header{
 .links-belt img:hover{
     transform: scale(1.2);
 }
+.links-photo{
+    margin-top: 10%;
+}
 .personal-photo img{
     width: 350px;
     height: 800px;
@@ -86,20 +83,23 @@ header{
     background-position: center top;
     border: 1px solid #1e0c4e;
     border-radius: 25px;
-    margin-left: calc(10% + min(500px , 60%)/2 - 175px);
+}
+.lower-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px 200px;
 }
 .projects{
     display: flex;
     flex-direction: column;  
-    position: absolute;
-    left: calc(min(500px , 60%) + 10% + 200px);
-    top: 60%;
     width: min(500px,30%);
     border-radius: 10px;
     color: rgb(221, 233, 235);
     box-shadow: -4px 5px rgba(197, 197, 197,0.2);
     background: linear-gradient(90deg,rgba(96, 96, 96, 0.15),rgba(197, 197, 197, 0.15));
     padding: 20px 50px;
+    
 }
 .projects h3 {
     font-size: 25px;
