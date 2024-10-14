@@ -1,32 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body{
     background: linear-gradient(90deg, rgb(0, 0, 0), rgb(33, 39, 54));
-    
+    font-family: 'Poppins';
 } 
+html {
+    scroll-behavior: smooth;
+}
+
 main{
     display: flex;
     flex-direction: column;
 }
-.person{
-    position: fixed;
-    overflow-y: auto ;
-    height: 90vh;
-    
-}
+
 .person::-webkit-scrollbar {
     display: none; /* Hides the scrollbar */
 }
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 .top-right {
     display: flex;
-    font-size: small;
+    flex-direction: row;
+    font-size: large;
     justify-content: right;
+    padding : 10px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.35), rgba(33, 39, 54, 0.35));
+
+}
+
+.top-right h3 {
+    margin: 10px 30px;  
 }
 .top-right a{
-    color: rgb(123, 150, 173);     
-    margin: 15px;
-    text-decoration: none;   
+    color: rgb(123, 150, 173);   
+    text-decoration: none;  
+    border-bottom: 2px solid transparent;
+    transition:  color 0.3s ease , border-bottom 0.3s ease  ; 
+
 }
 .top-right a:hover{
-    color: aliceblue;    
+    color: aliceblue;   
+    border-bottom: 2px solid aliceblue; 
 }
 
 .about{
@@ -75,16 +92,17 @@ main{
     display: flex;
     flex-direction: column;  
     position: absolute;
-    left: calc(min(500px , 60%) + 10% + 50px);
-    top: 50%;
+    left: calc(min(500px , 60%) + 10% + 200px);
+    top: 60%;
     width: min(500px,30%);
     border-radius: 10px;
     color: rgb(221, 233, 235);
     box-shadow: -4px 5px rgba(197, 197, 197,0.2);
     background: linear-gradient(90deg,rgba(96, 96, 96, 0.15),rgba(197, 197, 197, 0.15));
-    
+    padding: 20px 50px;
 }
 .projects h3 {
+    font-size: 25px;
     text-align: center;
     text-shadow: -1px 1px rgba(255, 255, 255, 0.345);
 
@@ -99,6 +117,8 @@ main{
     text-align: left;
     margin: 0px 10px;
     border-radius: 10px;
+    line-height: 1.2;
+    font-weight: 2000;
 }
 .project3:hover{
     background: linear-gradient(90deg,rgb(43, 43, 65),rgba(9, 214, 207, 0.372));
