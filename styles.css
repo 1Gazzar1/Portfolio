@@ -59,7 +59,7 @@ header{
     max-width: min(500px , 60%);
 }
 .about h1{
-    font-size: 40px;
+    font-size: 45px;
 }
 .about p{
     font-size: 22px;
@@ -79,8 +79,9 @@ header{
     position: absolute;
     border-radius: 50px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-    transition:  opacity 0.1s , scale 0.3s;
+    transition: opacity 0.1s , scale 0.3s;
     opacity: 0;
+    cursor: pointer;
 }
 .default-logo:hover{
     opacity: 0;
@@ -163,5 +164,23 @@ header{
     background: linear-gradient(90deg,rgba(135, 0, 0, 0.5),rgba(0, 187, 255, 0.155));
 }
 
+.skills{
+    font-size: 28px;
+    color: rgb(221, 233, 235);
+    margin: 0px 15%;
+}
+.skills h1{
+    text-align: center;
+    font-size: 50px;
+}
+.skills ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.skills img{
+    width: 100px;
+    height: 100px;
+}
 
 
