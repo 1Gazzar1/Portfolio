@@ -173,14 +173,39 @@ header{
     text-align: center;
     font-size: 50px;
 }
-.skills ul{
+.programming-lang ul,.frameworks ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.programming-lang li,.frameworks li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 30px;
+    font-weight: bold;
+}
+.programming-lang p,.frameworks p{
+    margin: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.skills img{
+    width: 80px;
+    height: 80px;
+    transition: scale 0.3s ease;
+    
+}
+.skills li:hover img{
+    scale : 1.1;
+}
+.skills li:hover p{
+    opacity: 1;
+}
+.soft-skills ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-.skills img{
-    width: 100px;
-    height: 100px;
 }
 
 
