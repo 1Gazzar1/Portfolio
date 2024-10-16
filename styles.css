@@ -133,6 +133,7 @@ header{
     box-shadow: -4px 5px rgba(197, 197, 197,0.2);
     background: linear-gradient(90deg,rgba(96, 96, 96, 0.15),rgba(197, 197, 197, 0.15));
     padding: 20px 50px;
+    margin-bottom: 5%;
     
 }
 .projects h3 {
@@ -207,5 +208,56 @@ header{
     flex-direction: row;
     justify-content: space-around;
 }
+footer h1 , footer p {
+    text-align: center;
+    color: rgb(221, 233, 235);
+}
+footer h1{
+    font-size: 50px;
+}
+footer p {
+    font-size: 20px;
+    white-space: pre;
+}
+.contact{
+    color: rgb(221, 233, 235);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30%;
+    padding: 40px;
+    background: linear-gradient(90deg,rgba(133, 133, 133, 0.35),rgba(167, 216, 249, 0.35));
+    border-radius: 25px;
+}
+.contact label{
+    font-size: 20px;
+}
+.contact input , .contact textarea{
+    
+    margin: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 22px;
+    border: 1px solid rgb(169, 169, 169);
+}
+.contact input{
+    height: 25px;
+}
+.contact textarea{
+    height: 100px;
+}
+.contact button {
+    margin: 0px 5px;
+    margin-top: 15px;
+    font-size: 20px ;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0px ;
+    background-color: rgb(0, 120, 34);
+    cursor: pointer;
+    color: rgb(221, 233, 235);
+}
 
-
+.contact button:hover {
+    background-color: rgb(0, 169, 48);
+}
