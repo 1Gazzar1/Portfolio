@@ -109,13 +109,12 @@ header{
 .links-photo{
     margin-top: 10%;
 }
-.personal-photo img{
+.personal-photo {
     width: 350px;
     height: 800px;
     background-image: url("Images/me.jpg");
     background-size: cover;
     background-position: center;
-    border: 1px solid #1e0c4e;
     border-radius: 25px;
 }
 .lower-section{
@@ -228,6 +227,7 @@ footer p {
     padding: 40px;
     background: linear-gradient(90deg,rgba(133, 133, 133, 0.35),rgba(167, 216, 249, 0.35));
     border-radius: 25px;
+    margin-bottom: 5%;
 }
 .contact label{
     font-size: 20px;
@@ -260,4 +260,23 @@ footer p {
 
 .contact button:hover {
     background-color: rgb(0, 169, 48);
+}
+.contact-bar{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 150px;
+    z-index: 1000;
+}
+.contact-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 50px; 
+    margin-top: 10px;
+}
+.contact-icons img {
+    transition: scale 0.2s ease-in-out ;
+}
+.contact-icons img:hover {
+    scale: 1.2;
 }
