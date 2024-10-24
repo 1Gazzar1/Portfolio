@@ -126,7 +126,7 @@ header{
 .projects{
     display: flex;
     flex-direction: column;  
-    width: min(500px,30%);
+    width: 30%;
     border-radius: 10px;
     color: rgb(221, 233, 235);
     box-shadow: -4px 5px rgba(197, 197, 197,0.2);
@@ -279,4 +279,10 @@ footer p {
 }
 .contact-icons img:hover {
     scale: 1.2;
+}
+
+@media (max-width: 1200px) {
+    .lower-section,.about,.top-right,.skills{
+        margin: 0px 0%; 
+    }
 }
