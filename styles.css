@@ -110,9 +110,9 @@ header{
     margin-top: 10%;
 }
 .personal-photo {
-    width: 350px;
+    width: 450px;
     height: 800px;
-    background-image: url("Images/me.jpg");
+    background-image: url("Images/me2.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 25px;
