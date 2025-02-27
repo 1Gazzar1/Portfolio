@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root{
+    --c1 : hsl(208, 100%, 100%);
+    --c2 :hsl(50, 100%, 60%);
+    --c3 : hsl(50, 100%, 40%);
+    --c4 : hsl(222, 25%, 15%);
+    --c5 : hsl(222, 25%, 0%);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body{
-    background: linear-gradient(90deg, rgb(0, 0, 0), rgb(33, 39, 54));
+    background: linear-gradient(90deg, var(--c5), var(--c4));
     font-family: 'Poppins';
+    color: var(--c1);
 } 
 html {
     scroll-behavior: smooth;
@@ -11,6 +23,7 @@ html {
 main{
     display: flex;
     flex-direction: column;
+    overflow:hidden;
 }
 
 header{
@@ -18,13 +31,21 @@ header{
     top: 0;
     z-index: 1000;
 }
+.gold{
+    color: var(--c2);
+    font-weight: bold;
+}
+.dark-gold{
+    color: var(--c3);
+    font-weight: bold;
+}
 .top-right {
     display: flex;
     flex-direction: row;
     font-size: large;
     justify-content: right;
     padding : 10px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.35), rgba(33, 39, 54, 0.35));
+    background-color: hsla(0, 0%, 100%, 0.05);
 
 }
 
@@ -35,28 +56,25 @@ header{
     color: rgb(123, 150, 173);   
     text-decoration: none;  
     border-bottom: 2px solid transparent;
-    transition:  color 0.3s ease , border-bottom 0.3s ease  ; 
-
+    transition:  all 0.3s ease; 
 }
 .top-right a:hover{
-    color: aliceblue;   
-    border-bottom: 2px solid aliceblue; 
+    color: var(--c1);   
+    border-bottom: 2px solid var(--c1); 
 }
 
 .title{
-    margin: 0px 100px;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    margin-top: 10%;
-    margin-bottom: 20%;
-    margin-left: 15%;
+    justify-content: space-evenly;
+    margin: 15% 0px;
 }
 .about{
     display: flex;
     flex-direction: column;
-    color: rgb(163, 182, 184);
+    color: var(--c1);
     max-width: min(500px , 60%);
+    line-height: 2rem;
 }
 .about h1{
     font-size: 45px;
@@ -92,97 +110,97 @@ header{
     scale: 1.1;
 
 }
+.links-photo{
+    width: fit-content;
+}
 .links-belt {   
     
     /* border: 0.1px solid rgba(255, 255, 255, 0.2);    */
     border-radius: 10px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    gap: 10px;
 }
 .links-belt img{
-    margin: 0px 5px;
-    transition: transform 0.1s;
+    transition: all 0.1s;
 }
 .links-belt img:hover{
-    transform: scale(1.2);
-}
-.links-photo{
-    margin-top: 10%;
+    scale: 1.2;
 }
 .personal-photo {
-    width: 450px;
-    height: 800px;
+    width: 400px;
+    height: 400px;
     background-image: url("Images/me2.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 25px;
 }
 .lower-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0px 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 8% 15%;
 }
 .projects{
+    margin: auto;
     display: flex;
-    flex-direction: column;  
-    width: 30%;
+    flex-direction: row;  
+    justify-content: center;
     border-radius: 10px;
-    color: rgb(221, 233, 235);
-    box-shadow: -4px 5px rgba(197, 197, 197,0.2);
-    background: linear-gradient(90deg,rgba(96, 96, 96, 0.15),rgba(197, 197, 197, 0.15));
-    padding: 20px 50px;
+    color: var(--c1);
     margin-bottom: 5%;
+    gap: 2rem;
     
 }
-.projects h3 {
-    font-size: 25px;
-    text-align: center;
-    text-shadow: -1px 1px rgba(255, 255, 255, 0.345);
 
-}
 .projects a {
     font-size: 20px;
     text-decoration: none;
-    color: rgb(221, 233, 235);
+    color: var(--c1);
 }
 
-.project1,.project2,.project3{
-    text-align: left;
-    margin: 0px 10px;
-    border-radius: 10px;
-    line-height: 1.2;
-    font-weight: 2000;
+.project-card{
+    min-width: 200px;
+    flex-basis: 25%;
+    padding: 1%;
+    background-color: var(--c4);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 1px var(--c2);  
+    transition: all 0.2s ease;
+    line-height: 1.75rem;
 }
-.project3:hover{
-    background: linear-gradient(90deg,rgb(43, 43, 65),rgba(9, 214, 207, 0.372));
+.project-card:hover{
+    background-color: var(--c5);
+    scale : 1.03 ; 
 }
-.project2:hover{
-    background: linear-gradient(90deg,rgba(79, 152, 45, 0.532),rgba(113, 135, 33, 0.492));
-}
-.project1:hover{
-    background: linear-gradient(90deg,rgba(135, 0, 0, 0.5),rgba(0, 187, 255, 0.155));
-}
+
 
 .skills{
     font-size: 28px;
-    color: rgb(221, 233, 235);
-    margin: 0px 15%;
+    color: var(--c1);
+    margin: 0% 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .skills h1{
     text-align: center;
     font-size: 50px;
 }
+.programming-lang , .frameworks , .soft-skills{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;  
+}
 .programming-lang ul,.frameworks ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 60px;
 }
 .programming-lang li,.frameworks li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 30px;
     font-weight: bold;
 }
 .programming-lang p,.frameworks p{
@@ -207,9 +225,12 @@ header{
     flex-direction: row;
     justify-content: space-around;
 }
+footer{
+    margin-top: 5%;
+}
 footer h1 , footer p {
     text-align: center;
-    color: rgb(221, 233, 235);
+    color: var(--c1);
 }
 footer h1{
     font-size: 50px;
@@ -219,7 +240,7 @@ footer p {
     white-space: pre;
 }
 .contact{
-    color: rgb(221, 233, 235);
+    color:  var(--c1);
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -255,7 +276,8 @@ footer p {
     padding: 10px 0px ;
     background-color: rgb(0, 120, 34);
     cursor: pointer;
-    color: rgb(221, 233, 235);
+    color: var(--c1);
+    transition: all 0.2s ease;
 }
 
 .contact button:hover {
@@ -275,14 +297,30 @@ footer p {
     margin-top: 10px;
 }
 .contact-icons img {
-    transition: scale 0.2s ease-in-out ;
+    transition: all 0.2s ease ;
 }
 .contact-icons img:hover {
     scale: 1.2;
 }
 
-@media (max-width: 1200px) {
-    .lower-section,.about,.top-right,.skills{
-        margin: 0px 0%; 
+@media (max-width: 900px) {
+    
+    .about {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    .personal-photo {
+        width: 250px;
+        height: 300px;
+    }
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        width: 90%;
+    }
+    .contact {
+        width: 90%;
     }
 }
