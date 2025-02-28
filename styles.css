@@ -5,14 +5,20 @@
     --c2 :hsl(50, 100%, 60%);
     --c3 : hsl(50, 100%, 40%);
     --c4 : hsl(222, 25%, 15%);
+    --c4L : hsl(222, 25%, 25%);
     --c5 : hsl(222, 25%, 0%);
+    --c6 : hsl(358, 100%, 22%);
+    --c6L : hsl(358, 100%, 35%);
+    --c6D: hsl(358, 100%, 10%);
+    --c6Gray :  hsl(358, 70%, 15%);
+    --c6LGray : hsl(355, 80%, 35%);
 }
 *{
     margin: 0px;
     padding: 0px;
 }
 body{
-    background: linear-gradient(90deg, var(--c5), var(--c4));
+    background: linear-gradient(90deg, var(--c5), var(--c6D));
     font-family: 'Poppins';
     color: var(--c1);
 } 
@@ -53,35 +59,35 @@ header{
     margin: 10px 30px;  
 }
 .top-right a{
-    color: rgb(123, 150, 173);   
+    color: var(--c1);   
     text-decoration: none;  
     border-bottom: 2px solid transparent;
     transition:  all 0.3s ease; 
 }
 .top-right a:hover{
-    color: var(--c1);   
-    border-bottom: 2px solid var(--c1); 
+    color: var(--c2);   
+    border-bottom: 2px solid var(--c2); 
 }
 
 .title{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 15% 0px;
+    margin: 15% 0%;
 }
 .about{
     display: flex;
     flex-direction: column;
     color: var(--c1);
-    max-width: min(500px , 60%);
-    line-height: 2rem;
+    max-width: min(500px , 40%);
+    line-height: 1.75rem;
+    font-size: 1.5rem;
 }
 .about h1{
     font-size: 45px;
+    line-height: 3rem;
 }
-.about p{
-    font-size: 22px;
-}
+
 .logo{
     display: flex;
     justify-content: center;
@@ -128,12 +134,11 @@ header{
     scale: 1.2;
 }
 .personal-photo {
-    width: 400px;
-    height: 400px;
-    background-image: url("Images/me2.jpg");
-    background-size: cover;
-    background-position: center;
+    width: min(400px,30vw);
+    height: min(400px,30vw);
+    object-fit: cover;
     border-radius: 25px;
+    border: transparent;
 }
 .lower-section{
     text-align: center;
@@ -153,23 +158,48 @@ header{
 }
 
 .projects a {
-    font-size: 20px;
     text-decoration: none;
     color: var(--c1);
+    line-height: 2rem;
+    font-size: 1rem;
 }
 
 .project-card{
+    text-align: left;
     min-width: 200px;
     flex-basis: 25%;
     padding: 1%;
-    background-color: var(--c4);
+    background-color: var(--c6Gray);
     border-radius: 15px;
-    box-shadow: 0px 0px 5px 1px var(--c2);  
+    box-shadow: 0px 0px 15px 1px var(--c2);  
     transition: all 0.2s ease;
-    line-height: 1.75rem;
+    display: flex;
+    flex-direction: column;
+}
+.card-details{
+    flex: 1;
+
+}
+.card-img-container{
+
+}
+.card-technos h4 { 
+    margin-bottom: 20px;
+}
+.card-technos ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card-technos ul li{
+    list-style: none;
+}
+.project-card h4 {
+    text-align: center ;
 }
 .project-card:hover{
-    background-color: var(--c5);
+    background-color: var(--c6LGray);
     scale : 1.03 ; 
 }
 
@@ -180,7 +210,7 @@ header{
     margin: 0% 15%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
 }
 .skills h1{
     text-align: center;
@@ -189,13 +219,15 @@ header{
 .programming-lang , .frameworks , .soft-skills{
     display: flex;
     flex-direction: column;
-    gap: 50px;  
+    gap: 50px;
+    
 }
 .programming-lang ul,.frameworks ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 60px;
+    flex-wrap: wrap;  
 }
 .programming-lang li,.frameworks li {
     display: flex;
@@ -204,14 +236,16 @@ header{
     font-weight: bold;
 }
 .programming-lang p,.frameworks p{
+    color: var(--c2);
     margin: 15px;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: all 0.5s ease;
 }
 .skills img{
     width: 80px;
     height: 80px;
-    transition: scale 0.3s ease;
+    transition: all 0.3s ease;
+
     
 }
 .skills li:hover img{
@@ -224,7 +258,12 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;  
 }
+.soft-skills ul li{
+    list-style: "📌";
+ }
+
 footer{
     margin-top: 5%;
 }
@@ -237,14 +276,13 @@ footer h1{
 }
 footer p {
     font-size: 20px;
-    white-space: pre;
 }
 .contact{
     color:  var(--c1);
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 30%;
+    width: min(550px,70%);
     padding: 40px;
     background: linear-gradient(90deg,rgba(133, 133, 133, 0.35),rgba(167, 216, 249, 0.35));
     border-radius: 25px;
@@ -286,9 +324,9 @@ footer p {
 .contact-bar{
     display: flex;
     flex-direction: column;
-    margin: 0px 150px;
+    
     z-index: 1000;
-}
+}   
 .contact-icons{
     display: flex;
     flex-direction: row;
@@ -304,14 +342,24 @@ footer p {
 }
 
 @media (max-width: 900px) {
-    
+    .top-right {
+        display: none;
+    }
+    .skills , .lower-section{
+        font-size: 1.5rem;
+    }
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .about {
         max-width: 80%;
         margin-bottom: 20px;
     }
     .personal-photo {
-        width: 250px;
-        height: 300px;
+        width: 50vw;
+        height: 50vw;
     }
     .projects {
         flex-direction: column;
@@ -320,7 +368,23 @@ footer p {
     .project-card {
         width: 90%;
     }
-    .contact {
-        width: 90%;
+    .skills img , .programming-lang li,.frameworks li{
+        width: 60px; 
+        height: 60px;
+    }
+    .card-details{
+        padding: 10px;
+    }
+    .skills h1 , footer h1 { 
+        font-size: 2rem;
+    }
+    footer { 
+        padding: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .skills img , .programming-lang li,.frameworks li{
+        width: 40px; 
+        height: 40px;
     }
 }
