@@ -6,10 +6,11 @@
     --c3 : hsl(50, 100%, 40%);
     --c4 : hsl(222, 25%, 15%);
     --c4L : hsl(222, 25%, 25%);
-    --c5 : hsl(222, 25%, 0%);
+    --c5 : hsl(358, 70%, 5%);
     --c6 : hsl(358, 100%, 22%);
     --c6L : hsl(358, 100%, 35%);
     --c6D: hsl(358, 100%, 10%);
+    --c7: hsl(358, 70%, 10%);
     --c6Gray :  hsl(358, 70%, 15%);
     --c6LGray : hsl(355, 80%, 35%);
 }
@@ -125,12 +126,14 @@ header{
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
-.links-belt img{
+.links-belt svg {
+    width: 35px;
     transition: all 0.1s;
+    fill: var(--c1);
 }
-.links-belt img:hover{
+.links-belt svg:hover{
     scale: 1.2;
 }
 .personal-photo {
@@ -175,12 +178,17 @@ header{
     transition: all 0.2s ease;
     display: flex;
     flex-direction: column;
+    
 }
 .card-details{
     flex: 1;
 
 }
-.card-img-container{
+.card-img-container img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 15px 0px;
 
 }
 .card-technos h4 { 
@@ -199,7 +207,7 @@ header{
     text-align: center ;
 }
 .project-card:hover{
-    background-color: var(--c6LGray);
+    background-color: var(--c7);
     scale : 1.03 ; 
 }
 
@@ -334,10 +342,12 @@ footer p {
     gap: 50px; 
     margin-top: 10px;
 }
-.contact-icons img {
+.contact-icons svg {
+    width: 35px;
+    fill: var(--c1);
     transition: all 0.2s ease ;
 }
-.contact-icons img:hover {
+.contact-icons svg:hover {
     scale: 1.2;
 }
 
